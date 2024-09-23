@@ -1,0 +1,29 @@
+.nav {
+  font-size: 14px;
+  color: var(--text-secondary);
+
+  padding-top: 2px;
+  margin-right: auto;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    height: 25px;
+
+    position: relative;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 33px;
+  }
+
+  &__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+    right: -16.5px;
+    border-right: 1px solid var(--light-grey-stroke);
+  }
+}

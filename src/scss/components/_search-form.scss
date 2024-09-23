@@ -1,0 +1,41 @@
+.search-form {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid var(--light-grey-stroke);
+  border-radius: 71px;
+
+  width: 285px;
+  height: 48px;
+
+  padding: 12px 18px;
+
+  &__btn {
+    background: none;
+    border: none;
+
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    margin-right: 14px;
+
+    cursor: pointer;
+
+    svg {
+      fill: var(--text-secondary);
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__input {
+    font-size: 14px;
+
+    border: none;
+    outline: none;
+  }
+}

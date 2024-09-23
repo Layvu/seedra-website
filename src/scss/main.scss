@@ -1,0 +1,17 @@
+@import "vars";
+@import "mixins";
+@import "vendor";
+@import "settings";
+@import "fonts";
+
+// custom components styles:
+@import "components/header";
+@import "components/nav";
+@import "components/social";
+@import "components/shop-nav";
+@import "components/search-form";
+@import "components/hero";
+
+@media (max-width: 1024px) {
+  //
+}
