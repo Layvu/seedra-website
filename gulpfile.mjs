@@ -119,11 +119,9 @@ const htmlInclude = () => {
 };
 
 const imgToApp = () => {
-  return src([
-    "./src/img/**.jpg",
-    "./src/img/**.png",
-    "./src/img/**.jpeg",
-  ]).pipe(dest("./app/img"));
+  return src(["./src/img/**.jpg", "./src/img/**.png", "./src/img/**.jpeg"], {
+    encoding: false,
+  }).pipe(dest("./app/img"));
 };
 
 const resources = () => {
