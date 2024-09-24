@@ -1,0 +1,60 @@
+.mission {
+  min-height: 104px;
+
+  &__container {
+    position: relative;
+    margin-top: 16px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+    background-color: var(--banana-yellow);
+
+    min-height: 104px;
+  }
+
+  &__title {
+    font-family: "Lexend-SemiBold", sans-serif;
+    font-size: 24px;
+    line-height: 131%;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+
+    margin: 0;
+  }
+
+  &__descr {
+    font-family: "Lexend-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 178%;
+    letter-spacing: -0.04em;
+    color: var(--text-secondary);
+
+    margin: 0;
+  }
+
+  &__leaves-left {
+    position: absolute;
+    top: 0;
+    left: 132px;
+    max-height: 100%;
+
+    width: 200px;
+    height: 125px;
+  }
+
+  &__leaves-right {
+    position: absolute;
+    top: 0;
+    right: 103px;
+    max-height: 100%;
+
+    width: 220px;
+    height: 195px;
+  }
+}
