@@ -20,11 +20,73 @@
   }
 
   &__title {
-    margin: 0;
     font-family: "Lexend-SemiBold", sans-serif;
     font-size: 48px;
+    letter-spacing: -0.05em;
+    line-height: 112%;
+
+    max-width: 650px;
+    margin: 0 0 11px;
   }
 
-  &__info {
+  &__descr {
+    font-family: "Lexend-Light", sans-serif;
+    font-size: 16px;
+    line-height: 175%;
+
+    max-width: 560px;
+    margin: 0 0 25px;
+  }
+
+  &__price-info {
+    display: flex;
+    align-items: center;
+    margin: 0 0 27px;
+  }
+
+  &__fire {
+    width: 46px;
+    height: 46px;
+
+    display: inline-block;
+
+    margin-right: 16px;
+
+    svg {
+      fill: var(--danger);
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__actual-price {
+    margin: 0 21px 0 0;
+    font-family: "Lexend-SemiBold", sans-serif;
+    font-size: 42px;
+  }
+
+  &__old-price {
+    margin: 0;
+    font-family: "Lexend-SemiBold", sans-serif;
+    font-size: 22px;
+    text-decoration-line: line-through;
+
+    color: var(--text-secondary);
+  }
+
+  &__button-group {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__image {
+    position: absolute;
+    right: 120px;
+    bottom: 0;
+
+    max-height: 100%;
   }
 }
