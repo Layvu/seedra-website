@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
   },
   "author": "Layvu",
   "license": "ISC",
@@ -28,6 +29,7 @@
   },
   "dependencies": {
     "node-fetch": "^2.6.1",
-    "stylelint-scss": "^6.7.0"
+    "stylelint-scss": "^6.7.0",
+    "swiper": "^11.1.14"
   }
 }
