@@ -1,1 +1,1 @@
-import "./components/main-slider";
+import "./components/banner-slider";
