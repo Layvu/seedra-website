@@ -35,11 +35,11 @@
   }
 
   &__catalog-btn:hover {
-    border: 1px solid var(--invisible-green);
+    border-color: var(--invisible-green);
   }
 
   &__catalog-btn:active {
-    border: 1px solid var(--green-brand);
+    border-color: var(--green-brand);
   }
 
   &__categories {
