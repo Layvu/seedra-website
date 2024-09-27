@@ -1,0 +1,64 @@
+.products {
+  &__container {
+    margin-top: 48px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    font-family: "Lexend-SemiBold", sans-serif;
+    font-size: 36px;
+    line-height: 150%;
+    letter-spacing: -0.05em;
+
+    margin: 0;
+  }
+
+  &__catalog-btn {
+    font-family: "Lexend-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 178%;
+    letter-spacing: -0.04em;
+    color: var(--green-brand);
+
+    border: 1px solid var(--light-grey-stroke);
+    border-radius: 8px;
+    padding: 11px 33px;
+
+    background: var(--white);
+  }
+
+  &__catalog-btn:hover {
+    border: 1px solid var(--invisible-green);
+  }
+
+  &__catalog-btn:active {
+    border: 1px solid var(--green-brand);
+  }
+
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    justify-content: space-between;
+
+    margin-bottom: 32px;
+  }
+
+  &__category {
+    flex: 1 1 auto;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

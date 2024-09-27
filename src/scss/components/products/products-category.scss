@@ -1,0 +1,26 @@
+.products-category {
+  &__container {
+    border: 2px solid var(--light-grey-stroke);
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 20px 0 20px 16px;
+  }
+
+  &__icon {
+    width: 28px;
+    height: 28px;
+
+    margin-right: 16px;
+  }
+
+  &__name {
+    font-family: "Lexend-Regular", sans-serif;
+    font-size: 14px;
+    line-height: 178%;
+
+    margin: 0;
+  }
+}
