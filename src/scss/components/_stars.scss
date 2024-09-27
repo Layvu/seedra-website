@@ -1,0 +1,18 @@
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__star {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    margin: 0;
+    margin-right: 1px;
+
+    svg {
+      fill: var(--yellow);
+    }
+  }
+}

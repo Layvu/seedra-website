@@ -13,6 +13,8 @@ import ttf2woff from "gulp-ttf2woff";
 import ttf2woff2 from "gulp-ttf2woff2";
 import fs from "fs";
 import { deleteAsync } from "del";
+import webpack from "webpack";
+import webpackStream from "webpack-stream";
 
 const sassInstance = gulpSass(sass);
 const bs = browserSync.create();
@@ -132,6 +134,36 @@ const clean = () => {
   return deleteAsync(["app/*"]);
 };
 
+const scripts = () => {
+  return src("./src/js/main.js")
+    .pipe(
+      webpackStream({
+        mode: "development",
+        output: {
+          filename: "main.js",
+        },
+        module: {
+          rules: [
+            {
+              test: /\.(?:js|mjs|cjs)$/,
+              exclude: /node_modules/,
+              use: {
+                loader: "babel-loader",
+                options: {
+                  presets: [["@babel/preset-env", { targets: "defaults" }]],
+                },
+              },
+            },
+          ],
+        },
+      })
+    )
+    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.write("."))
+    .pipe(dest("./app/js"))
+    .pipe(bs.stream());
+};
+
 const watchFiles = () => {
   bs.init({
     server: {
@@ -148,12 +180,13 @@ const watchFiles = () => {
   watch("./src/resources/**", resources);
   watch("./src/fonts/**.ttf", fonts);
   watch("./src/fonts/**.ttf", fontsStyle);
+  watch("./src/js/**/*.js", scripts);
 };
 
 export { htmlInclude as fileinclude, styles, watchFiles };
 export default series(
   clean,
-  parallel(htmlInclude, fonts, resources, imgToApp, svgSprites),
+  parallel(htmlInclude, scripts, fonts, resources, imgToApp, svgSprites),
   fontsStyle,
   styles,
   watchFiles
