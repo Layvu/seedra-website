@@ -1,88 +1,408 @@
 <section class="products">
+  <h2 class="visually-hidden">Our products on Main Page</h2>
   <div class="container products__container">
     <!-- header -->
-    <div class="products__header">
-      <h2 class="products__title">Our products.</h2>
-      <button class="products__catalog-btn">View all (12)</button>
+    <div class="products__header section-header">
+      <h2 class="section-header__title">Our products.</h2>
+      <button class="section-header__btn btn-reset" data-filter="all">View all (12)</button>
     </div>
 
     <!-- categories -->
     <ul class="products__categories">
       <!-- category -->
       <li class="products__category products-category">
-        <div class="products-category__container">
-          <svg class="products-category__icon">
-            <use xlink:href="img/sprite.svg#all-leave"></use>
-          </svg>
+        <button class="products-category__btn btn-reset" data-filter="all">
+          <svg class="products-category__icon"><use xlink:href="img/sprite.svg#all-leave"></use></svg>
           <p class="products-category__name">ALL</p>
-        </div>
+        </button>
       </li>
 
       <!-- category -->
       <li class="products__category products-category">
-        <div class="products-category__container">
-          <svg class="products-category__icon">
-            <use xlink:href="img/sprite.svg#bundles"></use>
-          </svg>
+        <button class="products-category__btn btn-reset" data-filter="bundles">
+          <svg class="products-category__icon"><use xlink:href="img/sprite.svg#bundles"></use></svg>
           <p class="products-category__name">BUNDLES</p>
-        </div>
+        </button>
       </li>
 
       <!-- category -->
       <li class="products__category products-category">
-        <div class="products-category__container">
-          <svg class="products-category__icon">
-            <use xlink:href="img/sprite.svg#herbs"></use>
-          </svg>
+        <button class="products-category__btn btn-reset" data-filter="herbs">
+          <svg class="products-category__icon"><use xlink:href="img/sprite.svg#herbs"></use></svg>
           <p class="products-category__name">HERBS</p>
-        </div>
+        </button>
       </li>
 
       <!-- category -->
       <li class="products__category products-category">
-        <div class="products-category__container">
-          <svg class="products-category__icon">
-            <use xlink:href="img/sprite.svg#vegetables"></use>
-          </svg>
+        <button class="products-category__btn btn-reset" data-filter="vegetables">
+          <svg class="products-category__icon"><use xlink:href="img/sprite.svg#vegetables"></use></svg>
           <p class="products-category__name">VEGETABLES</p>
-        </div>
+        </button>
       </li>
 
       <!-- category -->
       <li class="products__category products-category">
-        <div class="products-category__container">
-          <svg class="products-category__icon">
-            <use xlink:href="img/sprite.svg#fruits"></use>
-          </svg>
+        <button class="products-category__btn btn-reset" data-filter="fruits">
+          <svg class="products-category__icon"><use xlink:href="img/sprite.svg#fruits"></use></svg>
           <p class="products-category__name">FRUITS</p>
-        </div>
+        </button>
       </li>
 
       <!-- category -->
       <li class="products__category products-category">
-        <div class="products-category__container">
+        <button class="products-category__btn btn-reset" data-filter="supplies">
           <svg class="products-category__icon">
             <use xlink:href="img/sprite.svg#gardening-tool"></use>
           </svg>
           <p class="products-category__name">SUPPLIES</p>
-        </div>
+        </button>
       </li>
 
       <!-- category -->
       <li class="products__category products-category">
-        <div class="products-category__container">
-          <svg class="products-category__icon">
-            <use xlink:href="img/sprite.svg#flower"></use>
-          </svg>
+        <button class="products-category__btn btn-reset" data-filter="flowers">
+          <svg class="products-category__icon"><use xlink:href="img/sprite.svg#flower"></use></svg>
           <p class="products-category__name">FLOWERS</p>
-        </div>
+        </button>
       </li>
     </ul>
 
     <!-- cards -->
-    <ul class="products__cards">
-      <!-- card -->
-      <li class="products__card"></li>
+    <ul class="products__list">
+      <!-- product-card -->
+      <li class="products__item">
+        <article class="product-card">
+          <!-- favorite -->
+          <button class="product-card__favorite-btn btn-reset">
+            <div class="favorite-icon">
+              <svg class="favorite-icon__ellipse"><use xlink:href="img/sprite.svg#ellipse"></use></svg>
+              <svg class="favorite-icon__heart"><use xlink:href="img/sprite.svg#heart"></use></svg>
+            </div>
+          </button>
+
+          <!-- image -->
+          <div class="product-card__image">
+            <img src="img/prod-1.png" alt="Product 1" />
+          </div>
+
+          <!-- reviews -->
+          <div class="product-card__reviews">
+            <ul class="product-card__stars stars">
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+            </ul>
+            <p class="product-card__reviews-count">(123)</p>
+          </div>
+
+          <!-- title -->
+          <h3 class="product-card__title">
+            <a href="#" class="product-card__link"
+              >Seedra Cilantro Seeds for Planting Indoor and Outdoor</a
+            >
+          </h3>
+
+          <!-- price -->
+          <span class="product-card__price">$12.56</span>
+
+          <!-- button -->
+          <button class="product-card__cart-btn cart-button">
+            <svg class="cart-button__icon"><use xlink:href="img/sprite.svg#cart"></use></svg>
+          </button>
+        </article>
+      </li>
+
+      <!-- product-card -->
+      <li class="products__item">
+        <!-- заменить на product-card -->
+        <article class="product-card">
+          <!-- favorite -->
+          <button class="product-card__favorite-btn btn-reset">
+            <div class="favorite-icon">
+              <svg class="favorite-icon__ellipse"><use xlink:href="img/sprite.svg#ellipse"></use></svg>
+              <svg class="favorite-icon__heart"><use xlink:href="img/sprite.svg#heart"></use></svg>
+            </div>
+          </button>
+
+          <!-- image -->
+          <div class="product-card__image">
+            <img src="img/prod-2.png" alt="Product 2" />
+          </div>
+
+          <!-- reviews -->
+          <div class="product-card__reviews">
+            <ul class="product-card__stars stars">
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+            </ul>
+            <p class="product-card__reviews-count">(123)</p>
+          </div>
+
+          <!-- title -->
+          <h3 class="product-card__title">
+            <a href="#" class="product-card__link"
+              >SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor Planting</a
+            >
+          </h3>
+
+          <!-- price -->
+          <span class="product-card__price">$12.56</span>
+
+          <!-- button -->
+          <button class="product-card__cart-btn cart-button">
+            <svg class="cart-button__icon"><use xlink:href="img/sprite.svg#cart"></use></svg>
+          </button>
+        </article>
+      </li>
+
+      <!-- product-card -->
+      <li class="products__item">
+        <!-- заменить на product-card -->
+        <article class="product-card">
+          <!-- favorite -->
+          <button class="product-card__favorite-btn btn-reset">
+            <div class="favorite-icon">
+              <svg class="favorite-icon__ellipse"><use xlink:href="img/sprite.svg#ellipse"></use></svg>
+              <svg class="favorite-icon__heart"><use xlink:href="img/sprite.svg#heart"></use></svg>
+            </div>
+          </button>
+
+          <!-- image -->
+          <div class="product-card__image">
+            <img src="img/prod-3.png" alt="Product 3" />
+          </div>
+
+          <!-- reviews -->
+          <div class="product-card__reviews">
+            <ul class="product-card__stars stars">
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+            </ul>
+            <p class="product-card__reviews-count">(123)</p>
+          </div>
+
+          <!-- title -->
+          <h3 class="product-card__title">
+            <a href="#" class="product-card__link"
+              >SEEDRA Spinach Seeds for Indoor and Outdoor Planting</a
+            >
+          </h3>
+
+          <!-- price -->
+          <span class="product-card__price">$12.56</span>
+
+          <!-- button -->
+          <button class="product-card__cart-btn cart-button">
+            <svg class="cart-button__icon"><use xlink:href="img/sprite.svg#cart"></use></svg>
+          </button>
+        </article>
+      </li>
+
+      <!-- product-card -->
+      <li class="products__item">
+        <article class="product-card">
+          <!-- favorite -->
+          <button class="product-card__favorite-btn btn-reset">
+            <div class="favorite-icon">
+              <svg class="favorite-icon__ellipse"><use xlink:href="img/sprite.svg#ellipse"></use></svg>
+              <svg class="favorite-icon__heart"><use xlink:href="img/sprite.svg#heart"></use></svg>
+            </div>
+          </button>
+
+          <!-- image -->
+          <div class="product-card__image">
+            <img src="img/prod-1.png" alt="Product 1" />
+          </div>
+
+          <!-- reviews -->
+          <div class="product-card__reviews">
+            <ul class="product-card__stars stars">
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+            </ul>
+            <p class="product-card__reviews-count">(123)</p>
+          </div>
+
+          <!-- title -->
+          <h3 class="product-card__title">
+            <a href="#" class="product-card__link"
+              >Seedra Cilantro Seeds for Planting Indoor and Outdoor</a
+            >
+          </h3>
+
+          <!-- price -->
+          <span class="product-card__price">$12.56</span>
+
+          <!-- button -->
+          <button class="product-card__cart-btn cart-button">
+            <svg class="cart-button__icon"><use xlink:href="img/sprite.svg#cart"></use></svg>
+          </button>
+        </article>
+      </li>
+
+      <!-- product-card -->
+      <li class="products__item">
+        <!-- заменить на product-card -->
+        <article class="product-card">
+          <!-- favorite -->
+          <button class="product-card__favorite-btn btn-reset">
+            <div class="favorite-icon">
+              <svg class="favorite-icon__ellipse"><use xlink:href="img/sprite.svg#ellipse"></use></svg>
+              <svg class="favorite-icon__heart"><use xlink:href="img/sprite.svg#heart"></use></svg>
+            </div>
+          </button>
+
+          <!-- image -->
+          <div class="product-card__image">
+            <img src="img/prod-2.png" alt="Product 2" />
+          </div>
+
+          <!-- reviews -->
+          <div class="product-card__reviews">
+            <ul class="product-card__stars stars">
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+            </ul>
+            <p class="product-card__reviews-count">(123)</p>
+          </div>
+
+          <!-- title -->
+          <h3 class="product-card__title">
+            <a href="#" class="product-card__link"
+              >SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor Planting</a
+            >
+          </h3>
+
+          <!-- price -->
+          <span class="product-card__price">$12.56</span>
+
+          <!-- button -->
+          <button class="product-card__cart-btn cart-button">
+            <svg class="cart-button__icon"><use xlink:href="img/sprite.svg#cart"></use></svg>
+          </button>
+        </article>
+      </li>
+
+      <!-- product-card -->
+      <li class="products__item">
+        <!-- заменить на product-card -->
+        <article class="product-card">
+          <!-- favorite -->
+          <button class="product-card__favorite-btn btn-reset">
+            <div class="favorite-icon">
+              <svg class="favorite-icon__ellipse"><use xlink:href="img/sprite.svg#ellipse"></use></svg>
+              <svg class="favorite-icon__heart"><use xlink:href="img/sprite.svg#heart"></use></svg>
+            </div>
+          </button>
+
+          <!-- image -->
+          <div class="product-card__image">
+            <img src="img/prod-3.png" alt="Product 3" />
+          </div>
+
+          <!-- reviews -->
+          <div class="product-card__reviews">
+            <ul class="product-card__stars stars">
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+              <li class="product-card__star stars__star">
+                <svg><use xlink:href="img/sprite.svg#star"></use></svg>
+              </li>
+            </ul>
+            <p class="product-card__reviews-count">(123)</p>
+          </div>
+
+          <!-- title -->
+          <h3 class="product-card__title">
+            <a href="#" class="product-card__link"
+              >SEEDRA Spinach Seeds for Indoor and Outdoor Planting</a
+            >
+          </h3>
+
+          <!-- price -->
+          <span class="product-card__price">$12.56</span>
+
+          <!-- button -->
+          <button class="product-card__cart-btn cart-button">
+            <svg class="cart-button__icon"><use xlink:href="img/sprite.svg#cart"></use></svg>
+          </button>
+        </article>
+      </li>
     </ul>
   </div>
 </section>

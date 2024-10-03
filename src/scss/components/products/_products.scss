@@ -1,0 +1,29 @@
+.products {
+  &__container {
+    margin-top: 60px;
+  }
+
+  &__header {
+    margin-bottom: 38px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 29px;
+  }
+
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    justify-content: space-between;
+
+    margin-bottom: 32px;
+  }
+
+  &__category {
+    flex: 1 1 auto;
+  }
+}
