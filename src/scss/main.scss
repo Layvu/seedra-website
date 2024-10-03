@@ -11,13 +11,19 @@
 @import "components/social";
 @import "components/shop-nav";
 @import "components/search-form";
-@import "components/hero";
-@import "components/hero-button";
+@import "components/hero/hero";
+@import "components/hero/hero-button";
 @import "components/mission";
-@import "components/reviews";
-@import "components/review-card";
+@import "components/reviews/reviews";
+@import "components/reviews/review-card";
 @import "components/banner-slider";
 @import "components/stars";
+@import "components/products/products";
+@import "components/products/products-category";
+@import "components/products/product-card";
+@import "components/cart-button";
+@import "components/favorite-icon";
+@import "components/section-header";
 
 @media (max-width: 1024px) {
   //

@@ -13,15 +13,12 @@
     width: 24px;
     height: 24px;
 
-    svg {
+    use {
       fill: var(--text-secondary);
     }
-    //border: yellow 1px solid;
   }
 
   &__item:not(:last-child) {
     margin-right: 8px;
   }
-
-  //border: #ff4019 1px solid;
 }
