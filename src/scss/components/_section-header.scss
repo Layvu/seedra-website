@@ -13,26 +13,29 @@
   }
 
   &__btn {
-    font-family: "Lexend-Medium", sans-serif;
-    font-size: 16px;
-    line-height: 178%;
-    letter-spacing: -0.04em;
-    color: var(--green-brand);
+  }
+}
 
-    border: 1px solid var(--light-grey-stroke);
-    border-radius: 8px;
-    padding: 11px 33px;
+.default-btn {
+  font-family: "Lexend-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 178%;
+  letter-spacing: -0.04em;
+  color: var(--green-brand);
 
-    background: var(--white);
+  border: 1px solid var(--light-grey-stroke);
+  border-radius: 8px;
+  padding: 11px 33px;
 
-    cursor: pointer;
+  background: var(--white);
 
-    &:hover {
-      border-color: var(--invisible-green);
-    }
+  cursor: pointer;
 
-    &:active {
-      border-color: var(--green-brand);
-    }
+  &:hover {
+    border-color: var(--invisible-green);
+  }
+
+  &:active {
+    border-color: var(--green-brand);
   }
 }

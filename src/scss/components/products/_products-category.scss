@@ -18,6 +18,10 @@
     height: 30px;
 
     margin-right: 5px;
+
+    use {
+      fill: var(--green-brand);
+    }
   }
 
   &__name {
