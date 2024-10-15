@@ -32,6 +32,10 @@
     margin: 0;
   }
 
+  &_upper {
+    text-transform: uppercase;
+  }
+
   &:hover {
     background: var(--white);
     border: 2px solid var(--invisible-green);
