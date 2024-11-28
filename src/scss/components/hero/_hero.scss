@@ -1,10 +1,9 @@
 .hero {
-  //height: 100vh;
   min-height: 455px;
 
   &__container {
     position: relative;
-    margin-top: 32px;
+    padding-top: 32px;
   }
 
   &__content {

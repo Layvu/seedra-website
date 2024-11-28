@@ -27,10 +27,10 @@
     max-width: 100%;
 
     &_wide {
+      width: 90%;
       @media (max-width: 1024px) or (min-width: 1920px) {
         width: 50%;
       }
-      width: 90%;
     }
 
     img {
