@@ -4,6 +4,12 @@
 @import "settings";
 @import "fonts";
 
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
 // custom components styles:
 @import "components/svg";
 @import "components/header";
@@ -28,7 +34,4 @@
 @import "components/blog/post-info";
 @import "components/company-info";
 @import "components/footer";
-
-@media (max-width: 1024px) {
-  //
-}
+@import "components/menu";

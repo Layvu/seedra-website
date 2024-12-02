@@ -8,7 +8,7 @@ const bannerSlider = new Swiper(vars.$bannerSlider, {
 
   loop: false,
   centeredSlides: true,
-  slidesPerView: "auto",
+
   slideToClickedSlide: true,
 
   speed: 500,
@@ -20,4 +20,12 @@ const bannerSlider = new Swiper(vars.$bannerSlider, {
     type: "bullets",
     clickable: true,
   },
+
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+
+  slidesPerView: 1,
 });

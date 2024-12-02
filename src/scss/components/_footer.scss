@@ -42,6 +42,8 @@
   &__logo {
     width: 125px;
     height: 27px;
+
+    margin-right: 20px;
   }
 
   &__social {
@@ -60,5 +62,37 @@
     color: var(--text-secondary);
 
     margin: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    &__top {
+      align-items: flex-start;
+      padding-bottom: 24px;
+      margin-bottom: 25px;
+    }
+    &__nav-item {
+      margin: 0;
+    }
+    &__nav:last-child {
+      margin: 0;
+    }
+    &__nav-item:not(:last-child) {
+      margin: 0;
+      padding-bottom: 24px;
+    }
+    &__nav-list {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+    }
+    &__logo {
+      margin: 0;
+    }
+  }
+
+  .footer .footer__nav .footer__nav-item::after {
+    content: none;
   }
 }

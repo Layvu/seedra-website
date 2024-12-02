@@ -10,10 +10,15 @@ html {
 
 body {
   margin: 0;
+  margin-top: 74px;
   font-family: "Lexend-Regular", sans-serif;
   font-weight: 400;
   color: var(--text-primary);
   background-color: var(--white);
+}
+
+main {
+  position: relative;
 }
 
 img {

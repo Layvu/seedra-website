@@ -39,3 +39,12 @@
     border-color: var(--green-brand);
   }
 }
+
+@media (max-width: 768px) {
+  .section-header {
+    &__title {
+      font-size: 22px;
+      line-height: 155%;
+    }
+  }
+}

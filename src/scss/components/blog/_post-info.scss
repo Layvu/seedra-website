@@ -4,25 +4,41 @@
   align-items: flex-start;
   justify-content: flex-start;
 
+  align-self: stretch;
+
   position: relative;
   overflow: hidden;
 
   padding: 30px;
 
+  z-index: 1;
+
   &__image {
     position: absolute;
     pointer-events: none;
+    overflow: hidden;
 
     right: -2px;
     bottom: -5px;
 
+    z-index: -1;
+
+    width: 57%;
+    max-width: 100%;
+
+    &_wide {
+      width: 90%;
+      @media (max-width: 1024px) or (min-width: 1920px) {
+        width: 50%;
+      }
+    }
+
     img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
+      object-fit: contain;
     }
   }
-
   &__date {
     font-family: "Lexend-Regular", sans-serif;
     font-size: 14px;
@@ -65,7 +81,7 @@
     line-height: 178%;
     color: var(--text-secondary);
 
-    max-width: 400px;
+    max-width: 340px;
 
     margin: 0;
     margin-bottom: 14px;

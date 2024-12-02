@@ -1,6 +1,12 @@
 <section class="hero">
   <div class="container hero__container">
     <div class="hero__content">
+      <!-- hero image -->
+      <picture class="hero__image-container">
+        <source media="(max-width: 768px)" srcset="img/hero-product-mobile.png" />
+        <img src="img/hero-product.png" alt="Hot product" class="hero__image" />
+      </picture>
+
       <!-- text -->
       <h1 class="visually-hidden">Seedra - large seed store</h1>
       <h2 class="hero__title">SEEDRA Basil Seeds for Indoor and Outdoor Planting</h2>
@@ -23,9 +29,6 @@
         <button class="hero-button hero-button--add-cart">Add to cart</button>
         <button class="hero-button hero-button--discover">Discover</button>
       </div>
-
-      <!-- hero image -->
-      <img src="img/hero-product.png" alt="Hot product" class="hero__image" aria-hidden="true" />
     </div>
   </div>
 </section>
