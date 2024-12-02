@@ -1,5 +1,6 @@
 .nav {
-  font-size: 14px;
+  font-size: clamp(12px, 1vw, 18px);
+
   color: var(--text-secondary);
 
   &__list {
@@ -11,9 +12,8 @@
   }
 
   &__item {
-    &:not(:last-child) {
-      margin-right: 31.5px;
-    }
+    white-space: nowrap;
+    margin-right: 31.5px;
 
     &:not(:last-child)::after {
       content: "";

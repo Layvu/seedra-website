@@ -12,10 +12,16 @@
 
     padding: 50px 76px;
 
+    overflow: hidden;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
+    > * {
+      z-index: 2;
+    }
   }
 
   &__title {
@@ -33,7 +39,7 @@
     font-size: 16px;
     line-height: 175%;
 
-    max-width: 560px;
+    max-width: 440px;
     margin: 0 0 25px;
   }
 
@@ -41,6 +47,8 @@
     display: flex;
     align-items: center;
     margin: 0 0 27px;
+
+    order: 3;
   }
 
   &__fire {
@@ -49,6 +57,7 @@
 
     display: inline-block;
 
+    margin: 0;
     margin-right: 16px;
 
     use {
@@ -74,14 +83,88 @@
   &__button-group {
     display: flex;
     gap: 12px;
+
+    order: 4;
   }
 
-  &__image {
+  &__image-container {
     position: absolute;
-    right: 120px;
-    bottom: 0;
+    right: 121px;
+    bottom: -4px;
 
     max-height: 100%;
     pointer-events: none;
+
+    order: 2;
+
+    z-index: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    &__container {
+      padding-top: 0;
+      margin-top: 16px;
+    }
+    &__content {
+      padding: 0 14px 50px;
+    }
+    &__title {
+      font-size: 28px;
+      line-height: 129%;
+
+      order: 3;
+    }
+    &__descr {
+      font-size: 14px;
+      line-height: 200%;
+
+      max-width: 100%;
+      margin-bottom: 18px;
+
+      order: 4;
+    }
+    &__price-info {
+      margin-bottom: 10px;
+
+      order: 2;
+    }
+    &__fire {
+      width: 32px;
+      height: 32px;
+      margin-right: 14px;
+    }
+    &__actual-price {
+      font-size: 32px;
+      line-height: 106%;
+      letter-spacing: -0.05em;
+      color: var(--danger);
+
+      margin-right: 12px;
+    }
+
+    &__image-container {
+      position: static;
+      margin: -15px 0 0 -15px;
+
+      width: 90%;
+
+      order: 1;
+    }
+    &__image {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    &__image-container {
+      right: 15px;
+    }
+    &__title {
+      max-width: 500px;
+    }
   }
 }

@@ -25,22 +25,43 @@
     flex-wrap: wrap;
     gap: 12px;
 
-    justify-content: space-between;
+    justify-content: flex-start;
 
     margin-bottom: 32px;
   }
 
   &__category {
-    flex: 1 1 auto;
+    padding-right: 31px;
   }
 }
 
-@media (max-width: 1024px) {
-  .products__list {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    overflow-x: auto;
-    grid-auto-flow: column;
-    scroll-behavior: smooth;
+@media (max-width: 768px) {
+  .products {
+    &__container {
+      margin-top: 30px;
+    }
+    &__list {
+      display: flex;
+      gap: 11px;
+
+      justify-content: flex-start;
+      overflow-x: auto;
+    }
+    &__item {
+      min-width: 319px;
+    }
+    &__categories {
+      flex-wrap: nowrap;
+      gap: 16px;
+
+      justify-content: flex-start;
+      overflow-x: auto;
+
+      margin-bottom: 32px;
+      padding-bottom: 8px;
+    }
+    &__category {
+      padding-right: 31px;
+    }
   }
 }
