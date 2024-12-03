@@ -7,16 +7,13 @@
     width: 40px;
     height: 40px;
 
-    use {
-      fill: var(--white);
-      stroke-width: 1px;
-      stroke: var(--light-grey-stroke);
-    }
+    color: var(--white);
+    stroke-width: 1px;
+    stroke: var(--light-grey-stroke);
   }
 
   &:hover {
-    .favorite-icon__ellipse use {
-      stroke-width: 1px;
+    .favorite-icon__ellipse {
       stroke: var(--yellow);
     }
   }
@@ -30,8 +27,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    use {
-      fill: var(--yellow);
-    }
+    color: var(--yellow);
   }
 }

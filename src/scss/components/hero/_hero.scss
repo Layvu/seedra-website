@@ -60,9 +60,7 @@
     margin: 0;
     margin-right: 16px;
 
-    use {
-      fill: var(--danger);
-    }
+    color: var(--danger);
   }
 
   &__actual-price {

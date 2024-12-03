@@ -16,9 +16,7 @@
     width: 24px;
     height: 24px;
 
-    use {
-      fill: var(--green-brand);
-    }
+    color: var(--green-brand);
   }
 
   &:hover {
@@ -29,8 +27,8 @@
     border-color: var(--green-brand);
     background: var(--green-brand);
 
-    .cart-button__icon use {
-      fill: var(--white);
+    .cart-button__icon {
+      color: var(--white);
     }
   }
 }

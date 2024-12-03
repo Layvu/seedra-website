@@ -22,9 +22,7 @@
 
     cursor: pointer;
 
-    use {
-      fill: var(--text-secondary);
-    }
+    color: var(--text-secondary);
   }
 
   &__input {

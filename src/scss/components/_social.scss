@@ -10,9 +10,7 @@
     width: 24px;
     height: 24px;
 
-    use {
-      fill: var(--text-secondary);
-    }
+    color: var(--text-secondary);
   }
 
   &__item:not(:last-child) {

@@ -9,9 +9,8 @@
     width: 24px;
     height: 24px;
 
-    use {
-      fill: var(--green-brand);
-    }
+    color: var(--green-brand);
+    
   }
 
   &__item:not(:last-child) {
