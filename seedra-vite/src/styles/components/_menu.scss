@@ -1,0 +1,110 @@
+.menu {
+  display: none;
+
+  background-color: var(--white);
+  width: 70%;
+
+  position: fixed;
+  top: 70px;
+  right: 0;
+  z-index: 90;
+
+  &__container {
+    padding: 23px 8%;
+  }
+
+  &__search-form {
+    width: 100%;
+    margin-bottom: 21px;
+  }
+
+  &__nav {
+    margin-bottom: 23px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    font-family: "Lexend-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 178%;
+    letter-spacing: -0.04em;
+    color: var(--text-primary);
+
+    width: 100%;
+
+    padding: 11px 0;
+    border-bottom: 1px solid var(--light-grey-stroke);
+  }
+
+  &__toggle {
+    display: block;
+    width: 100%;
+    text-align: left;
+
+    &:hover,
+    &:focus {
+      color: var(--green-brand);
+    }
+  }
+
+  &_active {
+    display: block;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.submenu {
+  font-family: "Lexend-Light", sans-serif;
+  font-size: 16px;
+  line-height: 175%;
+  color: var(--text-secondary);
+
+  padding-left: 31px;
+
+  &__item {
+    padding-top: 15px;
+    width: 100%;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    &__nav,
+    &__social,
+    &__search-form {
+      display: none;
+    }
+
+    &__shop-nav {
+      margin-left: auto;
+    }
+
+    &__menu-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__logo {
+      margin: 0;
+      margin-left: 33px;
+    }
+
+    &__menu {
+      display: block;
+    }
+  }
+}

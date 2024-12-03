@@ -1,0 +1,37 @@
+@import "vars";
+@import "mixins";
+@import "vendor";
+@import "settings";
+@import "fonts";
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+// custom components styles:
+@import "components/svg";
+@import "components/header";
+@import "components/nav";
+@import "components/social";
+@import "components/shop-nav";
+@import "components/search-form";
+@import "components/hero/hero";
+@import "components/hero/hero-button";
+@import "components/mission";
+@import "components/reviews/reviews";
+@import "components/reviews/review-card";
+@import "components/banner-slider";
+@import "components/stars";
+@import "components/products/products";
+@import "components/products/products-category";
+@import "components/products/product-card";
+@import "components/cart-button";
+@import "components/favorite-icon";
+@import "components/section-header";
+@import "components/blog/blog";
+@import "components/blog/post-info";
+@import "components/company-info";
+@import "components/footer";
+@import "components/menu";

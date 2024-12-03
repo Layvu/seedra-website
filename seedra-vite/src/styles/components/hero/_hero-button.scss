@@ -1,0 +1,43 @@
+.hero-button {
+  border: none;
+  border-radius: 8px;
+
+  height: 51px;
+
+  font-family: "Lexend-Medium", sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.04em;
+  line-height: 178%;
+
+  cursor: pointer;
+
+  &--add-cart {
+    width: 153px;
+
+    background-color: var(--green-brand);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--hover);
+    }
+
+    &:active {
+      background-color: var(--primary-color);
+    }
+  }
+
+  &--discover {
+    width: 131px;
+
+    background-color: var(--white);
+    color: var(--green-brand);
+
+    &:hover {
+      background-color: var(--invisible-green);
+    }
+
+    &:active {
+      background-color: var(--invisible-green);
+    }
+  }
+}

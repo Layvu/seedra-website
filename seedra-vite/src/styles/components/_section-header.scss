@@ -1,0 +1,50 @@
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    font-family: "Lexend-SemiBold", sans-serif;
+    font-size: 36px;
+    line-height: 150%;
+    letter-spacing: -0.05em;
+
+    margin: 0;
+  }
+
+  &__btn {
+  }
+}
+
+.default-btn {
+  font-family: "Lexend-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 178%;
+  letter-spacing: -0.04em;
+  color: var(--green-brand);
+
+  border: 1px solid var(--light-grey-stroke);
+  border-radius: 8px;
+  padding: 11px 33px;
+
+  background: var(--white);
+
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--invisible-green);
+  }
+
+  &:active {
+    border-color: var(--green-brand);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    &__title {
+      font-size: 22px;
+      line-height: 155%;
+    }
+  }
+}
