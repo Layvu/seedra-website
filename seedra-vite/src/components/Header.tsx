@@ -1,38 +1,39 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="container header__container">
         {/* logo */}
-        <a href="#" className="logo header__logo" aria-label="logo">
+        <Link to="/" className="logo header__logo" aria-label="logo">
           <svg>
             <use xlinkHref="img/sprite.svg#logo"></use>
           </svg>
-        </a>
+        </Link>
 
         {/* nav */}
         <nav className="nav header__nav">
           <ul className="nav__list">
             <li className="nav__item">
-              <a href="#" className="nav__link nav__link_upper">
+              <Link to="/all-products" className="nav__link nav__link_upper">
                 all products
-              </a>
+              </Link>
             </li>
             <li className="nav__item">
-              <a href="#" className="nav__link nav__link_upper">
+              <Link to="/about-seedra" className="nav__link nav__link_upper">
                 about seedra
-              </a>
+              </Link>
             </li>
             <li className="nav__item">
-              <a href="#" className="nav__link nav__link_upper">
+              <Link to="/our-blog" className="nav__link nav__link_upper">
                 our blog
-              </a>
+              </Link>
             </li>
             <li className="nav__item">
-              <a href="#" className="nav__link nav__link_upper">
+              <Link to="/contacts" className="nav__link nav__link_upper">
                 contacts
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -68,18 +69,18 @@ const Header: React.FC = () => {
         {/* shop-nav */}
         <ul className="shop-nav header__shop-nav">
           <li className="shop-nav__item">
-            <a href="#" className="shop-nav__link" aria-label="favorites">
+            <Link to="/favorites" className="shop-nav__link" aria-label="favorites">
               <svg>
                 <use xlinkHref="img/sprite.svg#favorites"></use>
               </svg>
-            </a>
+            </Link>
           </li>
           <li className="shop-nav__item">
-            <a href="#" className="shop-nav__link" aria-label="cart">
+            <Link to="/cart" className="shop-nav__link" aria-label="cart">
               <svg>
                 <use xlinkHref="img/sprite.svg#cart"></use>
               </svg>
-            </a>
+            </Link>
           </li>
         </ul>
 

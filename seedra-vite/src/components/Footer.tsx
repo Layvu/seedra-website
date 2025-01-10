@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -9,29 +10,29 @@ const Footer: React.FC = () => {
           <nav className="nav footer__nav">
             <ul className="nav__list footer__nav-list">
               <li className="nav__item footer__nav-item">
-                <a href="#" className="nav__link nav__link_upper">
+                <Link to="/all-products" className="nav__link nav__link_upper">
                   all products
-                </a>
+                </Link>
               </li>
               <li className="nav__item footer__nav-item">
-                <a href="#" className="nav__link nav__link_upper">
+                <Link to="about-seedra" className="nav__link nav__link_upper">
                   about seedra
-                </a>
+                </Link>
               </li>
               <li className="nav__item footer__nav-item">
-                <a href="#" className="nav__link nav__link_upper">
+                <Link to="/our-blog" className="nav__link nav__link_upper">
                   our blog
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
 
           {/* logo */}
-          <a href="#" className="logo footer__logo" aria-label="logo">
+          <Link to="/" className="logo footer__logo" aria-label="logo">
             <svg>
               <use xlinkHref="img/sprite.svg#logo" />
             </svg>
-          </a>
+          </Link>
 
           {/* nav */}
           <nav className="nav footer__nav">
