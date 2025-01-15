@@ -1,37 +1,25 @@
-@import "vars";
-@import "mixins";
-@import "vendor";
-@import "settings";
-@import "fonts";
+//@import "styles/_vars";
+//@import "styles/_mixins";
+//@import "styles/_vendor";
+//@import "styles/_settings";
+//@import "styles/_fonts";
 
+// удолить вместе с этим файлом
 @media (max-width: 1024px) {
   .container {
     padding: 0 15px;
   }
 }
 
-// custom components styles:
-@import "components/svg";
-@import "components/header";
-@import "components/nav";
-@import "components/social";
-@import "components/shop-nav";
-@import "components/search-form";
-@import "components/hero/hero";
-@import "components/hero/hero-button";
-@import "components/mission";
-@import "components/reviews/reviews";
-@import "components/reviews/review-card";
-@import "components/banner-slider";
-@import "components/stars";
-@import "components/products/products";
-@import "components/products/products-category";
-@import "components/products/product-card";
-@import "components/cart-button";
-@import "components/favorite-icon";
-@import "components/section-header";
-@import "components/blog/blog";
-@import "components/blog/post-info";
-@import "components/company-info";
-@import "components/footer";
-@import "components/menu";
+// Custom components styles
+// Стоит ли объединить в отдельную папку компоненты, которые точно будут использоваться только на одной странице home?
+// Или только создать дополнительно папку для переиспользуемых компонентов?
+@import "styles/components/svg";
+@import "styles/components/nav";
+@import "styles/components/social";
+@import "styles/components/shop-nav";
+@import "styles/components/search-form";
+@import "styles/components/stars";
+@import "styles/components/section-header";
+
+@debug "Loading main.scss";

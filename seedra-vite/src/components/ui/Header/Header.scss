@@ -1,0 +1,81 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  background: var(--white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 9px;
+    padding-bottom: 11px;
+
+    min-height: 72px;
+  }
+
+  &__nav {
+    padding-top: 2px;
+  }
+
+  &__social {
+    margin-left: auto;
+    margin-right: 13px;
+  }
+
+  &__logo {
+    margin-right: 64px;
+  }
+
+  &__menu-toggle {
+    width: 20px;
+    height: 20px;
+
+    display: none;
+
+    margin-left: 32px;
+
+    color: var(--green-brand);
+  }
+
+  // (.header) temporary solution for specificity problem
+  @media (max-width: 1024px) {
+    .header {
+      &__nav,
+      &__social,
+      &__search-form {
+        display: none;
+      }
+
+      &__shop-nav {
+        margin-left: auto;
+      }
+
+      &__menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__logo {
+        margin: 0;
+        margin-left: 33px;
+      }
+    }
+  }
+}
+
+.logo {
+  width: 97px;
+  height: 21px;
+
+  display: inline-block;
+  flex-shrink: 0;
+
+  color: var(--green-brand);
+}

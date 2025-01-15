@@ -11,6 +11,10 @@
     margin: 0;
     margin-right: 1px;
 
-    color: var(--yellow);
+    color: #ccc;
+
+    &.filled {
+      color: #ffbb00;
+    }
   }
 }

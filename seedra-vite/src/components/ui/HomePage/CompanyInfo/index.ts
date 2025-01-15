@@ -1,0 +1,1 @@
+export { CompanyInfoUI } from "./CompanyInfoUI";

@@ -1,15 +1,13 @@
-import Hero from "../../components/Hero";
-import Menu from "../../components/Menu";
-import Mission from "../../components/Mission";
-import Products from "../../components/Products";
-import Blog from "../../components/Blog";
-import Reviews from "../../components/Reviews";
-import CompanyInfo from "../../components/CompanyInfo";
+import { Hero } from "@components/HomePage/Hero";
+import { Mission } from "@components/HomePage/Mission";
+import { Products } from "@components/HomePage/Products";
+import { Blog } from "@components/HomePage/Blog";
+import { Reviews } from "@components/HomePage/Reviews";
+import { CompanyInfo } from "@components/HomePage/CompanyInfo";
 
 export const Home: React.FC = () => {
   return (
     <>
-      <Menu />
       <Hero />
       <Mission />
       <Products />
