@@ -4,54 +4,23 @@ import "./Footer.scss";
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { StaticNavigation } from "@components/StaticNavigation";
+import { staticNavItems } from "constants/navigation";
+
 export const FooterUI: React.FC = () => {
   return (
     <footer className="footer footer_home-page">
       <div className="container footer__container">
         <div className="footer__top">
-          {/* nav */}
-          <nav className="nav footer__nav">
-            <ul className="nav__list footer__nav-list">
-              <li className="nav__item footer__nav-item">
-                <Link to="/all-products" className="nav__link nav__link_upper">
-                  all products
-                </Link>
-              </li>
-              <li className="nav__item footer__nav-item">
-                <Link to="about-seedra" className="nav__link nav__link_upper">
-                  about seedra
-                </Link>
-              </li>
-              <li className="nav__item footer__nav-item">
-                <Link to="/our-blog" className="nav__link nav__link_upper">
-                  our blog
-                </Link>
-              </li>
-            </ul>
-          </nav>
+          <StaticNavigation items={staticNavItems.slice(0, 3)} className="footer" />
 
-          {/* logo */}
           <Link to="/" className="logo footer__logo" aria-label="logo">
             <svg>
               <use xlinkHref="img/sprite.svg#logo" />
             </svg>
           </Link>
 
-          {/* nav */}
-          <nav className="nav footer__nav">
-            <ul className="nav__list footer__nav-list">
-              <li className="nav__item footer__nav-item">
-                <a href="#" className="nav__link">
-                  Terms&Conditions
-                </a>
-              </li>
-              <li className="nav__item footer__nav-item">
-                <a href="#" className="nav__link">
-                  Privacy Policy
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <StaticNavigation items={staticNavItems.slice(4, 6)} className="footer" isUppercase={false} />
         </div>
 
         <div className="footer__bottom">

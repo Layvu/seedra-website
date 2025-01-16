@@ -1,20 +1,12 @@
 //import s from "./Menu.module.scss";
+// import { CSSTransition } from "react-transition-group";
 import "./Menu.scss";
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-// import { CSSTransition } from "react-transition-group";
-
-interface Category {
-  id: number;
-  name: string;
-  subcategories: string[];
-}
-
-interface MenuUIProps {
-  categories: Category[];
-}
+import { MenuUIProps } from "./type";
+import { StaticNavigation } from "@components/StaticNavigation";
 
 export const MenuUI: React.FC<MenuUIProps> = ({ categories }) => {
   const [openCategoryId, setOpenCategoryId] = useState<number | null>(null);
@@ -39,44 +31,36 @@ export const MenuUI: React.FC<MenuUIProps> = ({ categories }) => {
           <input type="text" className="search-form__input" placeholder="Search" />
         </form>
 
-        {/* Navigation Menu */}
-        <nav className="menu__nav">
-          <ul className="menu__list">
-            {categories.map((category) => (
-              <li className="menu__item" key={category.id}>
-                <button
-                  className="menu__toggle btn-reset"
-                  aria-expanded={openCategoryId === category.id}
-                  onClick={() => handleCategoryClick(category.id)}>
-                  {category.name}
-                </button>
+        {/* Categories Menu */}
+        <ul className="menu__list">
+          {categories.map((category) => (
+            <li className="menu__item" key={category.id}>
+              <button
+                className="menu__toggle btn-reset"
+                aria-expanded={openCategoryId === category.id}
+                onClick={() => handleCategoryClick(category.id)}>
+                {category.name}
+              </button>
 
-                {openCategoryId === category.id && (
-                  <ul className="submenu">
-                    {category.subcategories.map((subcategory, index) => (
-                      <li key={index} className="submenu__item">
-                        <a href="#" className="submenu__link">
-                          {subcategory}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
+              {openCategoryId === category.id && (
+                <ul className="submenu">
+                  {category.subcategories.map((subcategory, index) => (
+                    <li key={index} className="submenu__item">
+                      <Link
+                        // fix to=
+                        to={`/all-products?filter=${category}+${subcategory}`}
+                        className="submenu__link">
+                        {subcategory}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
 
-            <li className="menu__item">
-              <Link to="/our-blog" className="menu__toggle btn-reset" aria-expanded="false">
-                Our blog
-              </Link>
-            </li>
-            <li className="menu__item">
-              <Link to="/about-seedra" className="menu__toggle btn-reset" aria-expanded="false">
-                About Seedra
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <StaticNavigation className={"menu"} isUppercase={false} />
 
         {/* Social Icons */}
         <ul className="social menu__social">

@@ -12,12 +12,9 @@
 }
 
 // Custom components styles
-// Стоит ли объединить в отдельную папку компоненты, которые точно будут использоваться только на одной странице home?
-// Или только создать дополнительно папку для переиспользуемых компонентов?
 @import "styles/components/svg";
-@import "styles/components/nav";
 @import "styles/components/social";
-@import "styles/components/shop-nav";
+@import "styles/components/shop-icons";
 @import "styles/components/search-form";
 @import "styles/components/stars";
 @import "styles/components/section-header";

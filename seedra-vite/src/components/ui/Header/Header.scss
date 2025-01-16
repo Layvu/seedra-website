@@ -23,6 +23,27 @@
     padding-top: 2px;
   }
 
+  &__list {
+    display: flex;
+    align-items: center;
+    height: 25px;
+
+    position: relative;
+  }
+
+  &__item {
+    white-space: nowrap;
+    margin-right: 31.5px;
+
+    &:not(:last-child)::after {
+      content: "";
+
+      position: relative;
+      right: -16.5px;
+      border-right: 1px solid var(--text-secondary);
+    }
+  }
+
   &__social {
     margin-left: auto;
     margin-right: 13px;
@@ -52,7 +73,7 @@
         display: none;
       }
 
-      &__shop-nav {
+      &__shop-icons {
         margin-left: auto;
       }
 

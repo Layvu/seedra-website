@@ -1,11 +1,14 @@
 .menu {
   background-color: var(--white);
   width: 70%;
+  height: 100vh;
 
   position: fixed;
   top: 70px;
   right: 0;
   z-index: 90;
+
+  overflow-y: auto;
 
   .menu {
     &_active {
@@ -13,7 +16,7 @@
     }
 
     &__container {
-      padding: 23px 8%;
+      padding: 23px 8% 90px;
     }
 
     &__search-form {
@@ -21,13 +24,11 @@
       margin-bottom: 21px;
     }
 
-    &__nav {
-      margin-bottom: 23px;
-    }
-
     &__list {
       display: flex;
       flex-direction: column;
+
+      margin-bottom: 23px;
     }
 
     &__item {
@@ -43,7 +44,8 @@
       border-bottom: 1px solid var(--light-grey-stroke);
     }
 
-    &__toggle {
+    &__toggle,
+    &__link {
       display: block;
       width: 100%;
       text-align: left;
