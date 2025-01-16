@@ -4,7 +4,7 @@ import "./Footer.scss";
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { StaticNavigation } from "@components/StaticNavigation";
+import { StaticNavigation } from "@components/Shared/StaticNavigation";
 import { staticNavItems } from "constants/navigation";
 
 export const FooterUI: React.FC = () => {

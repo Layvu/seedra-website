@@ -1,7 +1,7 @@
 import React from "react";
 
 import { NavigationProps } from "types/navigation";
-import { StaticNavigationUI } from "@components/ui/StaticNavigation";
+import { StaticNavigationUI } from "@components/ui/Shared/StaticNavigation";
 import { staticNavItems } from "constants/navigation";
 
 export const StaticNavigation: React.FC<NavigationProps> = ({

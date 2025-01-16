@@ -6,7 +6,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { MenuUIProps } from "./type";
-import { StaticNavigation } from "@components/StaticNavigation";
+
+import { StaticNavigation } from "@components/Shared/StaticNavigation";
+import { SearchForm } from "@components/Shared/SearchForm";
 
 export const MenuUI: React.FC<MenuUIProps> = ({ categories }) => {
   const [openCategoryId, setOpenCategoryId] = useState<number | null>(null);
@@ -20,16 +22,9 @@ export const MenuUI: React.FC<MenuUIProps> = ({ categories }) => {
 
   return (
     <div className="menu">
+      <div className="menu__overlay"></div>
       <div className="container menu__container">
-        {/* Search Form */}
-        <form action="#" className="search-form menu__search-form">
-          <button className="search-form__btn">
-            <svg>
-              <use xlinkHref="img/sprite.svg#loupe" />
-            </svg>
-          </button>
-          <input type="text" className="search-form__input" placeholder="Search" />
-        </form>
+        <SearchForm onSubmit={(query) => console.log(query)} className={"menu"} />
 
         {/* Categories Menu */}
         <ul className="menu__list">

@@ -2,7 +2,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { StaticNavigation } from "@components/StaticNavigation";
+import { StaticNavigation } from "@components/Shared/StaticNavigation";
+import { SearchForm } from "@components/Shared/SearchForm";
 
 import "./Header.scss";
 
@@ -40,15 +41,7 @@ export const HeaderUI: React.FC<HeaderUIProps> = ({ onMenuToggle }) => {
           </li>
         </ul>
 
-        {/* search */}
-        <form action="#" className="search-form header__search-form">
-          <button className="search-form__btn">
-            <svg>
-              <use xlinkHref="img/sprite.svg#loupe"></use>
-            </svg>
-          </button>
-          <input type="text" className="search-form__input" placeholder="Search" />
-        </form>
+        <SearchForm onSubmit={(query) => console.log(query)} className={"header"} />
 
         {/* shop-icons */}
         <ul className="shop-icons header__shop-icons">
