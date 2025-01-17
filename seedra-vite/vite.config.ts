@@ -35,15 +35,9 @@ export default defineConfig({
   },
   css: {
     preprocessorOptions: {
-      // оставить только global.scss
       scss: {
         additionalData: ` 
-          @import "styles/_fonts.scss";
-          @import "styles/_vars.scss";
-          @import "styles/_mixins.scss";
-          @import "styles/_vendor.scss";
-          @import "styles/_settings";
-          @import "styles/main.scss";
+          @import "styles/global.scss";
         `,
       },
     },

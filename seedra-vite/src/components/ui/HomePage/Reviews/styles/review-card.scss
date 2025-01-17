@@ -79,6 +79,11 @@
   &__stars {
     margin-bottom: 15px;
   }
+
+  &__star {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 @media (max-width: 1024px) {

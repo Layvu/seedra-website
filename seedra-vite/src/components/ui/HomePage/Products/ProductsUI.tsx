@@ -6,6 +6,7 @@ import { ProductsUIProps } from "./type";
 
 import { SvgIcon } from "@components/Shared/SvgIcon";
 import { SectionHeader } from "@components/HomePage/SectionHeader";
+import { Stars } from "@components/Shared/Stars";
 
 export const ProductsUI: React.FC<ProductsUIProps> = ({ categories, products }) => {
   return (
@@ -55,19 +56,7 @@ export const ProductsUI: React.FC<ProductsUIProps> = ({ categories, products }) 
 
                 {/* Reviews */}
                 <div className="product-card__reviews">
-                  <ul className="product-card__stars stars">
-                    {Array(5)
-                      .fill(null)
-                      .map((_, i) => (
-                        <li
-                          key={i}
-                          className={`product-card__star stars__star ${
-                            i < product.reviewRating ? "filled" : ""
-                          }`}>
-                          <SvgIcon id="star" title="Star icon" />
-                        </li>
-                      ))}
-                  </ul>
+                  <Stars rating={product.reviewRating} className="product-card" />
                   <p className="product-card__reviews-count">({product.reviewsCount})</p>
                 </div>
 

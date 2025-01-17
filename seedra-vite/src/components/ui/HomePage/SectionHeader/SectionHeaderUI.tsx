@@ -15,7 +15,7 @@ export const SectionHeaderUI: React.FC<SectionHeaderProps> = ({
   return (
     <div className={classNames("section-header", className)}>
       <h2 className="section-header__title">{title}</h2>
-      <Link to={buttonLink} className="section-header__btn default-btn btn-reset">
+      <Link to={buttonLink} className="btn-reset default-btn">
         {buttonText}
       </Link>
     </div>

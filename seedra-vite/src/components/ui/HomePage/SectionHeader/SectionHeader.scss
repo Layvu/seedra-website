@@ -11,12 +11,9 @@
 
     margin: 0;
   }
-
-  &__btn {
-  }
 }
 
-.default-btn {
+.btn-reset.default-btn {
   font-family: "Lexend-Medium", sans-serif;
   font-size: 16px;
   line-height: 178%;
@@ -28,8 +25,6 @@
   padding: 11px 33px;
 
   background: var(--white);
-
-  cursor: pointer;
 
   &:hover {
     border-color: var(--invisible-green);
