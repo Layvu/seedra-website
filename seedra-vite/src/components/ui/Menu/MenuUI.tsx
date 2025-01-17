@@ -44,7 +44,7 @@ export const MenuUI: React.FC<MenuUIProps> = ({ categories }) => {
                     <li key={index} className="submenu__item">
                       <Link
                         // fix to=
-                        to={`/all-products?filter=${category}+${subcategory}`}
+                        to={`/all-products?filter=${category.name.toLowerCase()}+${subcategory.toLowerCase()}`}
                         className="submenu__link">
                         {subcategory}
                       </Link>

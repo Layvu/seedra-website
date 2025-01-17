@@ -18,7 +18,11 @@
 
     z-index: 2;
 
-    cursor: pointer;
+    color: var(--light-grey-stroke);
+
+    &_active {
+      color: var(--yellow);
+    }
   }
 
   &__image {
@@ -74,6 +78,7 @@
   }
 
   &__link {
+    // to fix overflow
     &::before {
       content: "";
       position: absolute;

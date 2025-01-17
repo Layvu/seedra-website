@@ -1,6 +1,6 @@
 import React from "react";
 
-import { DefaultButtonProps } from "types/Buttons";
+import { DefaultButtonProps } from "types/buttons";
 import { DefaultButtonUI } from "@components/ui/Shared/DefaultButton";
 
 export const DefaultButton: React.FC<DefaultButtonProps> = ({ className, to, onClick, children }) => {

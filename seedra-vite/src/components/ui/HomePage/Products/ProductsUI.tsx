@@ -6,8 +6,8 @@ import { ProductsUIProps } from "./type";
 
 import { SvgIcon } from "@components/Shared/SvgIcon";
 import { SectionHeader } from "@components/HomePage/SectionHeader";
-import { Stars } from "@components/Shared/Stars";
 import { DefaultButton } from "@components/Shared/DefaultButton";
+import { ProductCard } from "@components/Shared/ProductCard";
 
 export const ProductsUI: React.FC<ProductsUIProps> = ({ categories, products }) => {
   return (
@@ -37,45 +37,15 @@ export const ProductsUI: React.FC<ProductsUIProps> = ({ categories, products }) 
         <ul className="products__list">
           {products.map((product, index) => (
             <li key={index} className="products__item">
-              <article className="product-card">
-                {/* Favorite */}
-                <button className="product-card__favorite-btn btn-reset">
-                  <div className="favorite-icon">
-                    <SvgIcon
-                      id="ellipse"
-                      title="Favorite icon outline"
-                      className="favorite-icon__ellipse"
-                    />
-                    <SvgIcon id="heart" title="Favorite icon" className="favorite-icon__heart" />
-                  </div>
-                </button>
-
-                {/* Image */}
-                <div className="product-card__image">
-                  <img src={product.img} alt={product.alt} />
-                </div>
-
-                {/* Reviews */}
-                <div className="product-card__reviews">
-                  <Stars rating={product.reviewRating} className="product-card" />
-                  <p className="product-card__reviews-count">({product.reviewsCount})</p>
-                </div>
-
-                {/* Title */}
-                <h3 className="product-card__title">
-                  <a href="#" className="product-card__link">
-                    {product.title}
-                  </a>
-                </h3>
-
-                {/* Price */}
-                <span className="product-card__price">{product.price}</span>
-
-                {/* Cart Button */}
-                <button className="product-card__cart-btn cart-button">
-                  <SvgIcon id="cart" title="Cart icon" className="cart-button__icon" />
-                </button>
-              </article>
+              <ProductCard
+                {...product}
+                onFavoriteToggle={() => {
+                  console.log(`AddToFavorite - ${product.id}`);
+                }}
+                onAddToCart={() => {
+                  console.log(`AddToCart - ${product.id}`);
+                }}
+              />
             </li>
           ))}
         </ul>

@@ -13,9 +13,11 @@
     stroke: var(--light-grey-stroke);
   }
 
-  &:hover {
-    .favorite-icon__ellipse {
-      stroke: var(--yellow);
+  &:hover,
+  &:active,
+  &:focus {
+    .favorite-icon__heart {
+      color: var(--yellow);
     }
   }
 
@@ -28,6 +30,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    color: var(--yellow);
+    color: currentColor;
   }
 }
