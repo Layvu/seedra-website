@@ -9,7 +9,7 @@ import { MenuUIProps } from "./type";
 
 import { StaticNavigation } from "@components/Shared/StaticNavigation";
 import { SearchForm } from "@components/Shared/SearchForm";
-import { SvgIcon } from "@components/Shared/SvgIcon";
+import { Social } from "@components/Shared/Social";
 
 export const MenuUI: React.FC<MenuUIProps> = ({ categories }) => {
   const [openCategoryId, setOpenCategoryId] = useState<number | null>(null);
@@ -58,19 +58,7 @@ export const MenuUI: React.FC<MenuUIProps> = ({ categories }) => {
 
         <StaticNavigation className={"menu"} isUppercase={false} />
 
-        {/* Social Icons */}
-        <ul className="social menu__social">
-          <li className="social__item">
-            <a href="#" className="social__link">
-              <SvgIcon id="inst" title="Instagram icon" />
-            </a>
-          </li>
-          <li className="social__item">
-            <a href="#" className="social__link">
-              <SvgIcon id="facebook" title="Facebook icon" />
-            </a>
-          </li>
-        </ul>
+        <Social className="menu__social" />
       </div>
     </div>
   );

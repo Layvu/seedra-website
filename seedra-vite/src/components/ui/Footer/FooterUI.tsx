@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { StaticNavigation } from "@components/Shared/StaticNavigation";
 import { staticNavItems } from "constants/navigation";
 import { SvgIcon } from "@components/Shared/SvgIcon";
+import { Social } from "@components/Shared/Social";
 
 export const FooterUI: React.FC = () => {
   return (
@@ -23,19 +24,7 @@ export const FooterUI: React.FC = () => {
         </div>
 
         <div className="footer__bottom">
-          {/* social */}
-          <ul className="social footer__social">
-            <li className="social__item footer__social-item">
-              <a href="#" className="social__link">
-                <SvgIcon id="inst" title="Instagram icon" />
-              </a>
-            </li>
-            <li className="social__item footer__social-item">
-              <a href="#" className="social__link">
-                <SvgIcon id="facebook" title="Facebook icon" />
-              </a>
-            </li>
-          </ul>
+          <Social className="footer__social" />
 
           {/* copyright */}
           <p className="footer__copyright">All rights reserved</p>

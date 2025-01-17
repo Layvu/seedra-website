@@ -4,13 +4,12 @@ import "./Header.scss";
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { HeaderUIProps } from "./type";
+
 import { StaticNavigation } from "@components/Shared/StaticNavigation";
 import { SearchForm } from "@components/Shared/SearchForm";
 import { SvgIcon } from "@components/Shared/SvgIcon";
-
-interface HeaderUIProps {
-  onMenuToggle: () => void;
-}
+import { Social } from "@components/Shared/Social";
 
 export const HeaderUI: React.FC<HeaderUIProps> = ({ onMenuToggle }) => {
   return (
@@ -22,19 +21,7 @@ export const HeaderUI: React.FC<HeaderUIProps> = ({ onMenuToggle }) => {
 
         <StaticNavigation className="header" />
 
-        {/* social */}
-        <ul className="social header__social">
-          <li className="social__item">
-            <a href="#" className="social__link">
-              <SvgIcon id="inst" title="Instagram icon" />
-            </a>
-          </li>
-          <li className="social__item">
-            <a href="#" className="social__link">
-              <SvgIcon id="facebook" title="Facebook icon" />
-            </a>
-          </li>
-        </ul>
+        <Social className="header__social" />
 
         <SearchForm onSubmit={(query) => console.log(query)} className={"header"} />
 
