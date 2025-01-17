@@ -5,6 +5,7 @@ import React from "react";
 import { BlogUIProps } from "./type";
 
 import { SectionHeader } from "@components/HomePage/SectionHeader";
+import { DefaultButton } from "@components/Shared/DefaultButton";
 
 export const BlogUI: React.FC<BlogUIProps> = ({ posts }) => {
   return (
@@ -27,7 +28,8 @@ export const BlogUI: React.FC<BlogUIProps> = ({ posts }) => {
               <span className="post-info__date">{post.date}</span>
               <h3 className="post-info__title">{post.title}</h3>
               <p className="post-info__descr">{post.description}</p>
-              <button className="post-info__btn default-btn btn-reset">Read</button>
+
+              <DefaultButton>Read</DefaultButton>
             </div>
           ))}
         </div>

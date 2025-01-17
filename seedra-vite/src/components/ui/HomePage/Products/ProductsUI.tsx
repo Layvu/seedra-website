@@ -7,6 +7,7 @@ import { ProductsUIProps } from "./type";
 import { SvgIcon } from "@components/Shared/SvgIcon";
 import { SectionHeader } from "@components/HomePage/SectionHeader";
 import { Stars } from "@components/Shared/Stars";
+import { DefaultButton } from "@components/Shared/DefaultButton";
 
 export const ProductsUI: React.FC<ProductsUIProps> = ({ categories, products }) => {
   return (
@@ -24,10 +25,10 @@ export const ProductsUI: React.FC<ProductsUIProps> = ({ categories, products }) 
         <ul className="products__categories">
           {categories.map((category) => (
             <li key={category.name} className="products__category products-category">
-              <button className="products-category__btn btn-reset" data-filter={category.name}>
+              <DefaultButton className="products-category__btn">
                 <SvgIcon id={category.icon} title={category.name} className="products-category__icon" />
                 <p className="products-category__name products-category_upper">{category.name}</p>
-              </button>
+              </DefaultButton>
             </li>
           ))}
         </ul>

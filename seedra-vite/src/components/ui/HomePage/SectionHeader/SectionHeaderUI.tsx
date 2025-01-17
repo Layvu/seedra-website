@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import classNames from "classnames";
 import "./SectionHeader.scss";
 
 import { SectionHeaderProps } from "types/sectionHeader";
+import { DefaultButton } from "@components/Shared/DefaultButton";
 
 export const SectionHeaderUI: React.FC<SectionHeaderProps> = ({
   className,
@@ -15,9 +15,8 @@ export const SectionHeaderUI: React.FC<SectionHeaderProps> = ({
   return (
     <div className={classNames("section-header", className)}>
       <h2 className="section-header__title">{title}</h2>
-      <Link to={buttonLink} className="btn-reset default-btn">
-        {buttonText}
-      </Link>
+
+      <DefaultButton to={buttonLink}>{buttonText}</DefaultButton>
     </div>
   );
 };
