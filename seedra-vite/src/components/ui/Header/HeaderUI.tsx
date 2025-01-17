@@ -1,11 +1,12 @@
 //import s from "./Header.module.scss";
+import "./Header.scss";
+
 import React from "react";
 import { Link } from "react-router-dom";
 
 import { StaticNavigation } from "@components/Shared/StaticNavigation";
 import { SearchForm } from "@components/Shared/SearchForm";
-
-import "./Header.scss";
+import { SvgIcon } from "@components/Shared/SvgIcon";
 
 interface HeaderUIProps {
   onMenuToggle: () => void;
@@ -16,9 +17,7 @@ export const HeaderUI: React.FC<HeaderUIProps> = ({ onMenuToggle }) => {
     <header className="header">
       <div className="container header__container">
         <Link to="/" className="logo header__logo" aria-label="logo">
-          <svg>
-            <use xlinkHref="img/sprite.svg#logo"></use>
-          </svg>
+          <SvgIcon id="logo" title="Seedra logo" />
         </Link>
 
         <StaticNavigation className="header" />
@@ -27,16 +26,12 @@ export const HeaderUI: React.FC<HeaderUIProps> = ({ onMenuToggle }) => {
         <ul className="social header__social">
           <li className="social__item">
             <a href="#" className="social__link">
-              <svg>
-                <use xlinkHref="img/sprite.svg#inst"></use>
-              </svg>
+              <SvgIcon id="inst" title="Instagram icon" />
             </a>
           </li>
           <li className="social__item">
             <a href="#" className="social__link">
-              <svg>
-                <use xlinkHref="img/sprite.svg#facebook"></use>
-              </svg>
+              <SvgIcon id="facebook" title="Facebook icon" />
             </a>
           </li>
         </ul>
@@ -47,16 +42,12 @@ export const HeaderUI: React.FC<HeaderUIProps> = ({ onMenuToggle }) => {
         <ul className="shop-icons header__shop-icons">
           <li className="shop-icons__item">
             <Link to="/favorites" className="shop-icons__link" aria-label="favorites">
-              <svg>
-                <use xlinkHref="img/sprite.svg#favorites"></use>
-              </svg>
+              <SvgIcon id="favorites" title="Favorites icon" />
             </Link>
           </li>
           <li className="shop-icons__item">
             <Link to="/cart" className="shop-icons__link" aria-label="cart">
-              <svg>
-                <use xlinkHref="img/sprite.svg#cart"></use>
-              </svg>
+              <SvgIcon id="cart" title="Cart icon" />
             </Link>
           </li>
         </ul>
@@ -66,9 +57,7 @@ export const HeaderUI: React.FC<HeaderUIProps> = ({ onMenuToggle }) => {
           className="header__menu-toggle btn-reset"
           aria-label="menu toggle"
           onClick={onMenuToggle}>
-          <svg>
-            <use xlinkHref="img/sprite.svg#menu"></use>
-          </svg>
+          <SvgIcon id="menu" title="Menu icon" />
         </button>
       </div>
     </header>

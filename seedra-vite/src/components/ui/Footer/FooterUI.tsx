@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 import { StaticNavigation } from "@components/Shared/StaticNavigation";
 import { staticNavItems } from "constants/navigation";
+import { SvgIcon } from "@components/Shared/SvgIcon";
 
 export const FooterUI: React.FC = () => {
   return (
@@ -15,9 +16,7 @@ export const FooterUI: React.FC = () => {
           <StaticNavigation items={staticNavItems.slice(0, 3)} className="footer" />
 
           <Link to="/" className="logo footer__logo" aria-label="logo">
-            <svg>
-              <use xlinkHref="img/sprite.svg#logo" />
-            </svg>
+            <SvgIcon id="logo" title="Seedra logo" />
           </Link>
 
           <StaticNavigation items={staticNavItems.slice(4, 6)} className="footer" isUppercase={false} />
@@ -28,16 +27,12 @@ export const FooterUI: React.FC = () => {
           <ul className="social footer__social">
             <li className="social__item footer__social-item">
               <a href="#" className="social__link">
-                <svg>
-                  <use xlinkHref="img/sprite.svg#inst" />
-                </svg>
+                <SvgIcon id="inst" title="Instagram icon" />
               </a>
             </li>
             <li className="social__item footer__social-item">
               <a href="#" className="social__link">
-                <svg>
-                  <use xlinkHref="img/sprite.svg#facebook" />
-                </svg>
+                <SvgIcon id="facebook" title="Facebook icon" />
               </a>
             </li>
           </ul>

@@ -2,25 +2,8 @@
 import "./Products.scss";
 
 import React from "react";
-
-interface Category {
-  name: string;
-  icon: string;
-}
-
-interface Product {
-  img: string;
-  alt: string;
-  title: string;
-  price: string;
-  reviewsCount: number;
-  reviewRating: number;
-}
-
-interface ProductsUIProps {
-  categories: Category[];
-  products: Product[];
-}
+import { SvgIcon } from "@components/Shared/SvgIcon";
+import { ProductsUIProps } from "./type";
 
 export const ProductsUI: React.FC<ProductsUIProps> = ({ categories, products }) => {
   return (
@@ -40,9 +23,7 @@ export const ProductsUI: React.FC<ProductsUIProps> = ({ categories, products }) 
           {categories.map((category) => (
             <li key={category.name} className="products__category products-category">
               <button className="products-category__btn btn-reset" data-filter={category.name}>
-                <svg className="products-category__icon">
-                  <use xlinkHref={`img/sprite.svg#${category.icon}`} />
-                </svg>
+                <SvgIcon id={category.icon} title={category.name} className="products-category__icon" />
                 <p className="products-category__name products-category_upper">{category.name}</p>
               </button>
             </li>
@@ -57,12 +38,12 @@ export const ProductsUI: React.FC<ProductsUIProps> = ({ categories, products }) 
                 {/* Favorite */}
                 <button className="product-card__favorite-btn btn-reset">
                   <div className="favorite-icon">
-                    <svg className="favorite-icon__ellipse">
-                      <use xlinkHref="img/sprite.svg#ellipse" />
-                    </svg>
-                    <svg className="favorite-icon__heart">
-                      <use xlinkHref="img/sprite.svg#heart" />
-                    </svg>
+                    <SvgIcon
+                      id="ellipse"
+                      title="Favorite icon outline"
+                      className="favorite-icon__ellipse"
+                    />
+                    <SvgIcon id="heart" title="Favorite icon" className="favorite-icon__heart" />
                   </div>
                 </button>
 
@@ -82,9 +63,7 @@ export const ProductsUI: React.FC<ProductsUIProps> = ({ categories, products }) 
                           className={`product-card__star stars__star ${
                             i < product.reviewRating ? "filled" : ""
                           }`}>
-                          <svg>
-                            <use xlinkHref="img/sprite.svg#star" />
-                          </svg>
+                          <SvgIcon id="star" title="Star icon" />
                         </li>
                       ))}
                   </ul>
@@ -103,9 +82,7 @@ export const ProductsUI: React.FC<ProductsUIProps> = ({ categories, products }) 
 
                 {/* Cart Button */}
                 <button className="product-card__cart-btn cart-button">
-                  <svg className="cart-button__icon">
-                    <use xlinkHref="img/sprite.svg#cart" />
-                  </svg>
+                  <SvgIcon id="cart" title="Cart icon" className="cart-button__icon" />
                 </button>
               </article>
             </li>

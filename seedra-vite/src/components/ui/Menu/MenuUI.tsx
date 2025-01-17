@@ -9,6 +9,7 @@ import { MenuUIProps } from "./type";
 
 import { StaticNavigation } from "@components/Shared/StaticNavigation";
 import { SearchForm } from "@components/Shared/SearchForm";
+import { SvgIcon } from "@components/Shared/SvgIcon";
 
 export const MenuUI: React.FC<MenuUIProps> = ({ categories }) => {
   const [openCategoryId, setOpenCategoryId] = useState<number | null>(null);
@@ -61,16 +62,12 @@ export const MenuUI: React.FC<MenuUIProps> = ({ categories }) => {
         <ul className="social menu__social">
           <li className="social__item">
             <a href="#" className="social__link">
-              <svg>
-                <use xlinkHref="img/sprite.svg#inst" />
-              </svg>
+              <SvgIcon id="inst" title="Instagram icon" />
             </a>
           </li>
           <li className="social__item">
             <a href="#" className="social__link">
-              <svg>
-                <use xlinkHref="img/sprite.svg#facebook" />
-              </svg>
+              <SvgIcon id="facebook" title="Facebook icon" />
             </a>
           </li>
         </ul>

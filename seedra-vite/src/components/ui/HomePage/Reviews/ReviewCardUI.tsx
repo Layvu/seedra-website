@@ -3,6 +3,7 @@ import "./Reviews.scss";
 
 import React from "react";
 import { ReviewCardProps } from "./type";
+import { SvgIcon } from "@components/Shared/SvgIcon";
 
 export const ReviewCardUI: React.FC<ReviewCardProps> = ({ review }) => {
   return (
@@ -20,9 +21,7 @@ export const ReviewCardUI: React.FC<ReviewCardProps> = ({ review }) => {
         <ul className="stars review-card__stars">
           {[...Array(5)].map((_, index) => (
             <li key={index} className={`stars__star ${index < review.rating ? "filled" : ""}`}>
-              <svg>
-                <use xlinkHref="img/sprite.svg#star"></use>
-              </svg>
+              <SvgIcon id="star" title="Star icon" />
             </li>
           ))}
         </ul>

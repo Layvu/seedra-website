@@ -1,18 +1,9 @@
 //import s from "./Hero.module.scss";
 import "./Hero.scss";
-
 import React from "react";
 
-interface HeroUIProps {
-  title: string;
-  description: string;
-  actualPrice: string;
-  oldPrice: string;
-  image: {
-    desktop: string;
-    mobile: string;
-  };
-}
+import { SvgIcon } from "@components/Shared/SvgIcon";
+import { HeroUIProps } from "./type";
 
 export const HeroUI: React.FC<HeroUIProps> = ({ title, description, actualPrice, oldPrice, image }) => {
   return (
@@ -32,9 +23,7 @@ export const HeroUI: React.FC<HeroUIProps> = ({ title, description, actualPrice,
 
           {/* Price */}
           <div className="hero__price-info">
-            <svg className="hero__fire">
-              <use xlinkHref={`img/sprite.svg#fire`} />
-            </svg>
+            <SvgIcon id="fire" title="Fire icon" className="hero__fire" />
             <span className="hero__actual-price actual-price">{actualPrice}</span>
             <span className="hero__old-price">{oldPrice}</span>
           </div>
