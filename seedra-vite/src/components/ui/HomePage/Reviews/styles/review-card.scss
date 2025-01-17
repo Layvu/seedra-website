@@ -1,0 +1,109 @@
+.review-card {
+  width: 100%;
+
+  &__container {
+    min-height: 325px;
+    max-height: 325px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    border: 1px solid var(--light-grey-stroke);
+    border-radius: 12px;
+
+    box-shadow: 0 4px 21px 0 var(--american-silver);
+    background: var(--white);
+
+    padding: 35px 34px;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin: 0 0 28px;
+  }
+
+  &__author-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    flex: 1;
+  }
+
+  &__avatar {
+    width: 64px;
+    height: 64px;
+
+    margin-right: 24px;
+  }
+
+  &__descr {
+    font-family: "Lexend-Light", sans-serif;
+    font-size: 16px;
+    line-height: 175%;
+
+    margin: 0;
+  }
+
+  &__name {
+    font-family: "Lexend-Medium", sans-serif;
+    font-size: 18px;
+    line-height: 139%;
+    letter-spacing: -0.04em;
+
+    margin: 0;
+  }
+
+  &__date {
+    font-family: "Lexend-Regular", sans-serif;
+    font-size: 14px;
+    line-height: 178%;
+    color: var(--text-secondary);
+  }
+
+  &__title {
+    margin: 0;
+
+    font-family: "Lexend-SemiBold", sans-serif;
+    font-size: 36px;
+    line-height: 150%;
+    letter-spacing: -0.05em;
+  }
+
+  &__stars {
+    margin-bottom: 15px;
+  }
+
+  &__star {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .review-card {
+    width: 90%;
+
+    &__container {
+      padding: 27px 22px;
+    }
+    &__author {
+      margin-bottom: 14px;
+    }
+    &__avatar {
+      width: 40px;
+      height: 40px;
+      margin-right: 19px;
+    }
+    &__descr {
+      font-size: 14px;
+      line-height: 200%;
+    }
+  }
+}

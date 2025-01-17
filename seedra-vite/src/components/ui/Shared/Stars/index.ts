@@ -1,0 +1,1 @@
+export { StarsUI } from "./StarsUI";

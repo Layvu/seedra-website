@@ -1,0 +1,44 @@
+.products-category {
+  .products-category {
+    &__btn {
+      display: flex;
+      align-items: center;
+      padding: 20px 31px 20px 16px;
+
+      height: 68px;
+      width: 100%;
+
+      border: 2px solid var(--light-grey-stroke);
+
+      &:hover {
+        background: var(--white);
+        border: 2px solid var(--invisible-green);
+      }
+      &:active,
+      &:focus {
+        border: 2px solid var(--green-brand);
+      }
+    }
+
+    &__icon {
+      width: 30px;
+      height: 30px;
+
+      margin-right: 5px;
+
+      color: var(--green-brand);
+    }
+
+    &__name {
+      font-family: "Lexend-Regular", sans-serif;
+      font-size: 14px;
+      line-height: 178%;
+
+      margin: 0;
+    }
+
+    &_upper {
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    font-family: "Lexend-SemiBold", sans-serif;
+    font-size: 36px;
+    line-height: 150%;
+    letter-spacing: -0.05em;
+
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    &__title {
+      font-size: 22px;
+      line-height: 155%;
+    }
+  }
+}

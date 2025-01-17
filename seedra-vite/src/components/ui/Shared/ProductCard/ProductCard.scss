@@ -1,0 +1,105 @@
+.product-card {
+  width: 100%;
+  max-width: 512px;
+
+  position: relative;
+
+  border: 2px solid var(--light-grey-stroke);
+  border-radius: 12px;
+  background: var(--white);
+  overflow: hidden;
+
+  padding: 28px 28px;
+
+  &__favorite-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    z-index: 2;
+
+    color: var(--light-grey-stroke);
+
+    &_active {
+      color: var(--yellow);
+    }
+  }
+
+  &__image {
+    border-radius: 12px;
+    margin-bottom: 25px;
+
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-height: 100%;
+    }
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin-bottom: 4px;
+  }
+
+  &__stars {
+    margin-right: 13px;
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__reviews-count {
+    font-family: "Lexend-Regular", sans-serif;
+    font-size: 14px;
+    line-height: 178%;
+    color: var(--text-secondary);
+
+    margin: 0;
+  }
+
+  &__title {
+    font-family: "Lexend-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 156%;
+    letter-spacing: -0.04em;
+
+    position: relative;
+    height: 3em;
+    overflow: hidden;
+
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    // to fix overflow
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__price {
+    font-family: "Lexend-SemiBold", sans-serif;
+    font-size: 28px;
+    line-height: 193%;
+
+    margin: 0;
+  }
+
+  &__cart-btn {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+  }
+}

@@ -1,0 +1,1 @@
+export { ProductCardUI } from "./ProductCardUI";

@@ -1,0 +1,37 @@
+.base-nav {
+  font-size: clamp(12px, 1vw, 18px);
+  color: var(--text-secondary);
+
+  &__link {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      bottom: 0;
+      left: 0;
+
+      transform-origin: left;
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      width: 100%;
+    }
+
+    &:hover {
+      color: var(--text-secondary);
+    }
+    &:focus {
+      color: var(--green-brand);
+    }
+
+    &_upper {
+      text-transform: uppercase;
+    }
+  }
+}
