@@ -2,29 +2,20 @@
 import "./Blog.scss";
 
 import React from "react";
+import { BlogUIProps } from "./type";
 
-interface Post {
-  date: string;
-  title: string;
-  description: string;
-  img: string;
-}
-
-interface BlogUIProps {
-  posts: Post[];
-}
+import { SectionHeader } from "@components/HomePage/SectionHeader";
 
 export const BlogUI: React.FC<BlogUIProps> = ({ posts }) => {
   return (
     <section className="blog blog_home-page">
       <div className="container blog__container">
-        {/* Header */}
-        <div className="blog__header section-header">
-          <h2 className="section-header__title">Our blog.</h2>
-          <button className="section-header__btn default-btn btn-reset" data-filter="to-blog">
-            Go to our blog
-          </button>
-        </div>
+        <SectionHeader
+          className="blog__header"
+          title="Our blog."
+          buttonText="Go to our blog"
+          buttonLink="/our-blog"
+        />
 
         {/* Blog Grid */}
         <div className="blog__grid">

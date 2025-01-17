@@ -2,21 +2,22 @@
 import "./Products.scss";
 
 import React from "react";
-import { SvgIcon } from "@components/Shared/SvgIcon";
 import { ProductsUIProps } from "./type";
+
+import { SvgIcon } from "@components/Shared/SvgIcon";
+import { SectionHeader } from "@components/HomePage/SectionHeader";
 
 export const ProductsUI: React.FC<ProductsUIProps> = ({ categories, products }) => {
   return (
     <section className="products products_home-page">
       <h2 className="visually-hidden">Our products on Main Page</h2>
       <div className="container products__container">
-        {/* Header */}
-        <div className="products__header section-header">
-          <h2 className="section-header__title">Our products.</h2>
-          <button className="section-header__btn default-btn btn-reset" data-filter="all">
-            View all ({products.length})
-          </button>
-        </div>
+        <SectionHeader
+          className="products__header"
+          title="Our products."
+          buttonText={`View all (${products.length})`}
+          buttonLink="/all-products"
+        />
 
         {/* Categories */}
         <ul className="products__categories">
